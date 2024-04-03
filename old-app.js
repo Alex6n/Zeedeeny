@@ -1,13 +1,53 @@
 import { StatusBar } from "expo-status-bar";
+import * as Font from "expo-font";
+import { useState, useEffect, useCallback } from "react";
 import { Image, Pressable, StyleSheet, Text, View } from "react-native";
+import * as SplashScreen from "expo-splash-screen";
+
+const getFont = () =>
+  Font.loadAsync({
+    "dubai-regular": require("./assets/fonts/DubaiW23-Regular.ttf"),
+    "dubai-bold": require("./assets/fonts/DubaiW23-Bold.ttf"),
+  });
 
 export default function App() {
+  const [fontsLoaded, setFontsLoaded] = useState(false);
+  const [appIsReady, setAppIsReady] = useState(false);
+
+  useEffect(() => {
+    async function prepare() {
+      try {
+        await SplashScreen.preventAutoHideAsync();
+        await getFont();
+      } catch (error) {
+        console.error("Error loading resources:", error);
+      } finally {
+        setFontsLoaded(true);
+      }
+    }
+
+    prepare();
+  }, []);
+
+  useEffect(() => {
+    if (fontsLoaded) {
+      // Hide splash screen
+      SplashScreen.hideAsync();
+      setAppIsReady(true);
+    }
+  }, [fontsLoaded]);
+
+  if (!appIsReady) {
+    return (
+      <View className="bg-zinc-200" style={styles.container}>
+        <Text>Loading...</Text>
+      </View>
+    );
+  }
+
   return (
     <View className="bg-zinc-200" style={styles.container}>
-      <Text
-        style={styles.font}
-        className="text-[#c2a0b0] text-3xl font-extrabold my-10"
-      >
+      <Text className="text-[#c2a0b0] text-3xl font-extrabold my-10 font-dubai">
         {/*cfaabc */}
         يرجى اختيار موقع الخدمة
       </Text>
@@ -49,9 +89,5 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
-  },
-  font: {
-    fontFamily: "ReadexPro-Bold",
-    fontSize: 20,
   },
 });
