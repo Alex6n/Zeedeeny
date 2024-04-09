@@ -20,9 +20,25 @@ const ListItem = () => {
           توفر هذه الخدمة العناية باليدين ( تقليم الأظافر وطلائها )
         </Text>
 
-        <Text className="text-[#633e539b] text-[10px] truncate mb-1">
-          مقدمة الخدمة : سارة الثقفي
-        </Text>
+        <View className="flex-row justify-between w-full">
+          <View className="flex-row">
+            {[...Array(3)].map((_, index) => (
+              <Star
+                fill="rgb(252 211 77)"
+                className="max-w-[16px] max-h-[16px]"
+              />
+            ))}
+            {[...Array(2)].map((_, index) => (
+              <Star
+                fill="rgb(209 213 219)"
+                className="max-w-[16px] max-h-[16px]"
+              />
+            ))}
+          </View>
+          <Text className="text-[#633e539b] text-[10px] truncate mb-1">
+            مقدمة الخدمة : سارة الثقفي
+          </Text>
+        </View>
 
         <View className="flex-row">
           <View className="flex-row-reverse">
