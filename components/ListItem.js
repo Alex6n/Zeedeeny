@@ -11,8 +11,8 @@ const ListItem = () => {
           <Text className="text-black truncate w-[73%] font-bold">
             خدمة البدي كير لليدين
           </Text>
-          <View className="flex items-center justify-center rounded-md bg-rose-600/90 px-1">
-            <Text className="text-white text-xs">30% OFFER</Text>
+          <View className="flex items-center justify-center rounded-md bg-rose-600/90 h-[19] p-1">
+            <Text className="text-white text-[10px]">30% OFFER</Text>
           </View>
         </View>
 
