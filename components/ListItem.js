@@ -11,7 +11,7 @@ const ListItem = ({
   rating,
   image,
 }) => {
-  const [Liked, setLiked] = useState(false);
+  const [liked, setLiked] = useState(false);
   return (
     <Pressable className="flex-row gap-1 mx-20 my-1 justify-start items-center border border-gray-200 bg-pink-100/40 w-full h-28 py-1 rounded-2xl">
       {image ? (
@@ -64,11 +64,11 @@ const ListItem = ({
           <View className="flex-row-reverse justify-between items-center w-32">
             <Text className="text-xs text-green-600">{price} RS</Text>
             <View className="flex-row-reverse gap-4">
-              <Pressable onPress={() => setLiked(!Liked)}>
+              <Pressable onPress={() => setLiked(!liked)}>
                 <Heart
-                  fill={Liked ? "red" : "none"}
+                  fill={liked ? "red" : "none"}
                   className={`max-w-[20px] max-h-[20px] ${
-                    Liked ? "text-red-500" : "text-zinc-400"
+                    liked ? "text-red-500" : "text-zinc-400"
                   }`}
                 />
               </Pressable>
