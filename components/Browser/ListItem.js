@@ -27,7 +27,7 @@ const ListItem = ({
         </View>
       )}
 
-      <View className="flex-col w-[69%] items-end text-ellipsis">
+      <View className="flex-1 mr-2 items-end text-ellipsis">
         <View className="flex-row-reverse w-full justify-between my-1 h-5">
           <BoldText classNames="text-black truncate w-[73%]">{title}</BoldText>
           {offer && (
