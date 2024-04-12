@@ -2,7 +2,6 @@ import { View } from "react-native";
 import { SelectedProvider } from "./lib/selectedContext";
 import AppView from "./components/Main/AppView";
 
-// TODO: Implement Dubai font
 // TODO: Add filters dialog option to browser
 // TODO: Work on categories
 // TODO: Work on chat

@@ -1,6 +1,8 @@
-import { Image, Pressable, Text, View } from "react-native";
+import { Image, Pressable, View, Text } from "react-native";
 import { Heart, ImageOff, Share2, Star } from "lucide-react-native";
 import { useState } from "react";
+import { RegularText } from "../Text/RegularText";
+import { BoldText } from "../Text/BoldText";
 
 const ListItem = ({
   title,
@@ -27,23 +29,23 @@ const ListItem = ({
 
       <View className="flex-col w-[69%] items-end text-ellipsis">
         <View className="flex-row-reverse w-full justify-between my-1 h-5">
-          <Text className="text-black truncate w-[73%] font-bold">{title}</Text>
+          <BoldText classNames="text-black truncate w-[73%]">{title}</BoldText>
           {offer && (
             <View className="flex items-center justify-center h-[19]">
-              <Text className="text-white text-[10px] rounded-md bg-rose-600/90 p-[3px]">
+              <RegularText classNames="text-white text-[10px] rounded-md bg-rose-600/90 p-[2px] px-[4px]">
                 {offer} OFFER
-              </Text>
+              </RegularText>
             </View>
           )}
         </View>
 
-        <Text className="text-zinc-600 text-xs truncate h-8">
+        <RegularText classNames="text-zinc-500 text-xs truncate h-8 mt-1">
           {descreption}
-        </Text>
+        </RegularText>
 
-        <Text className="text-[#633e539b] text-[10px] truncate mb-1">
+        <RegularText classNames="text-[#633e539b] text-[10px] truncate mb-1">
           مقدمة الخدمة : {provider}
-        </Text>
+        </RegularText>
 
         <View className="flex-row justify-between w-full">
           <View className="flex-row">
@@ -64,7 +66,9 @@ const ListItem = ({
           </View>
 
           <View className="flex-row-reverse justify-between items-center w-32">
-            <Text className="text-xs text-green-600">{price} RS</Text>
+            <RegularText classNames="text-sm text-green-600">
+              {price} RS
+            </RegularText>
             <View className="flex-row-reverse gap-4">
               <Pressable onPress={() => setLiked(!liked)}>
                 <Heart

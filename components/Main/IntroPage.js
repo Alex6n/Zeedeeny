@@ -4,9 +4,10 @@ import {
   ImageBackground,
   Pressable,
   StyleSheet,
-  Text,
   View,
 } from "react-native";
+import { BoldText } from "../Text/BoldText";
+import { RegularText } from "../Text/RegularText";
 
 export default function Intro() {
   return (
@@ -16,16 +17,12 @@ export default function Intro() {
       resizeMode="cover"
     >
       <View style={styles.container}>
-        <Text
-          // style={styles.readexpro}
-          className="text-[#a0667092] text-3xl font-extrabold my-10"
-        >
-          {/*cfaabc */}
+        <BoldText classNames="text-[#a0667092] text-2xl my-10">
           يرجى اختيار موقع الخدمة
-        </Text>
+        </BoldText>
         <View className="flex-row gap-5">
           <Pressable
-            className="flex justify-center items-center rounded-full border-2 border-gray-400/20 w-[125] py-4"
+            className="flex justify-center items-center rounded-full border-2 border-gray-400/20 w-[135] py-4"
             onPress={() => {}}
           >
             <Image
@@ -33,21 +30,21 @@ export default function Intro() {
               source={require("../../assets/4363444.png")}
             />
 
-            <Text className="text-[#a0667092] mt-1 font-bold text-[18px] ">
+            <RegularText classNames="text-[#a0667092] mt-1 text-[18px] ">
               نجيك
-            </Text>
+            </RegularText>
           </Pressable>
           <Pressable
-            className="flex justify-center items-center rounded-full border-2 border-gray-400/20 w-[125] py-4"
+            className="flex justify-center items-center rounded-full border-2 border-gray-400/20 w-[135] py-4"
             onPress={() => {}}
           >
             <Image
               className="w-[63px] h-[63px]"
               source={require("../../assets/830469.png")}
             />
-            <Text className="text-[#a0667092] mt-1 font-bold text-[18px]">
+            <RegularText classNames="text-[#a0667092] mt-1 text-[18px]">
               تجينا
-            </Text>
+            </RegularText>
           </Pressable>
         </View>
         <StatusBar style="auto" />

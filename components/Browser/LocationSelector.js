@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Pressable, Text, View } from "react-native";
+import { Pressable, View } from "react-native";
+import { BoldText } from "../Text/BoldText";
 
 const LocationSelector = () => {
   const [location, setLocation] = useState("نجيك");
@@ -12,7 +13,7 @@ const LocationSelector = () => {
         } py-2 px-12 rounded-lg`}
         onPress={() => setLocation("تجينا")}
       >
-        <Text className="font-bold text-[15px] text-pink-900">تجينا</Text>
+        <BoldText classNames="text-[15px] text-pink-900">تجينا</BoldText>
       </Pressable>
       <Pressable
         className={`${
@@ -20,7 +21,7 @@ const LocationSelector = () => {
         } py-2 px-12 rounded-lg`}
         onPress={() => setLocation("نجيك")}
       >
-        <Text className="font-bold text-[15px] text-pink-900">نجيك</Text>
+        <BoldText classNames="text-[15px] text-pink-900">نجيك</BoldText>
       </Pressable>
     </View>
   );
