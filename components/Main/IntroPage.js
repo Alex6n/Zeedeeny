@@ -12,7 +12,7 @@ export default function Intro() {
   return (
     <ImageBackground
       className="w-full h-full"
-      source={require("../assets/bg.jpg")}
+      source={require("../../assets/bg.jpg")}
       resizeMode="cover"
     >
       <View style={styles.container}>
@@ -30,7 +30,7 @@ export default function Intro() {
           >
             <Image
               className="w-[63px] h-[63px]"
-              source={require("../assets/4363444.png")}
+              source={require("../../assets/4363444.png")}
             />
 
             <Text className="text-[#a0667092] mt-1 font-bold text-[18px] ">
@@ -43,7 +43,7 @@ export default function Intro() {
           >
             <Image
               className="w-[63px] h-[63px]"
-              source={require("../assets/830469.png")}
+              source={require("../../assets/830469.png")}
             />
             <Text className="text-[#a0667092] mt-1 font-bold text-[18px]">
               تجينا

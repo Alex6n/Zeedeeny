@@ -1,6 +1,6 @@
-import { useSelected } from "../lib/selectedContext";
+import { useSelected } from "../../lib/selectedContext";
 import Header from "./Header";
-import Home from "./Home";
+import Home from "../Browser/Home";
 import NavMenu from "./NavMenu";
 
 const AppView = () => {

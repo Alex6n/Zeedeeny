@@ -1,5 +1,5 @@
 import { Text, View } from "react-native";
-import { useSelected } from "../lib/selectedContext";
+import { useSelected } from "../../lib/selectedContext";
 
 export default function Header() {
   const { selected } = useSelected();

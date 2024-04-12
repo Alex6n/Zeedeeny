@@ -1,5 +1,5 @@
 import { Pressable } from "react-native";
-import { useSelected } from "../lib/selectedContext";
+import { useSelected } from "../../lib/selectedContext";
 
 export const NavItem = ({ section, children }) => {
   const { selected, setSelected } = useSelected();

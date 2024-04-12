@@ -8,17 +8,15 @@ const Home = () => {
       <LocationSelector />
       <ListContainer>
         <ListItem
-          key={1}
           title="خدمة البدي كير لليدين"
           descreption="توفر هذه الخدمة العناية باليدين (تقليم الأظافر وطلائها)"
           provider="سارة الثقفي"
           price="210"
           offer="30%"
-          image={require("../assets/example.jpeg")}
+          image={require("../../assets/example.jpeg")}
           rating={4}
         />
         <ListItem
-          key={2}
           title="شسوار الشعر"
           descreption="تقدم هذه الخدمة سشوار للشعر"
           provider="سمية الزهراني"

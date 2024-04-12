@@ -49,12 +49,14 @@ const ListItem = ({
           <View className="flex-row">
             {[...Array(Math.round(rating))].map((_, index) => (
               <Star
+                key={index}
                 fill="rgb(252 211 77)"
                 className="max-w-[16px] max-h-[16px]"
               />
             ))}
             {[...Array(5 - Math.round(rating))].map((_, index) => (
               <Star
+                key={index}
                 fill="rgb(209 213 219)"
                 className="max-w-[16px] max-h-[16px]"
               />
