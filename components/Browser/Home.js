@@ -1,5 +1,5 @@
 import LocationSelector from "./LocationSelector";
-import ListContainer from "./ListContainer";
+import ListContainer from "../Main/ListContainer";
 import ListItem from "./ListItem";
 
 const Home = () => {
@@ -15,6 +15,118 @@ const Home = () => {
           offer="30%"
           image={require("../../assets/example.jpeg")}
           rating={4}
+        />
+        <ListItem
+          title="شسوار الشعر"
+          descreption="تقدم هذه الخدمة سشوار للشعر"
+          provider="سمية الزهراني"
+          price="120"
+          rating={2.3}
+        />
+        <ListItem
+          title="شسوار الشعر"
+          descreption="تقدم هذه الخدمة سشوار للشعر"
+          provider="سمية الزهراني"
+          price="120"
+          rating={2.3}
+        />
+        <ListItem
+          title="شسوار الشعر"
+          descreption="تقدم هذه الخدمة سشوار للشعر"
+          provider="سمية الزهراني"
+          price="120"
+          rating={2.3}
+        />
+        <ListItem
+          title="شسوار الشعر"
+          descreption="تقدم هذه الخدمة سشوار للشعر"
+          provider="سمية الزهراني"
+          price="120"
+          rating={2.3}
+        />
+        <ListItem
+          title="شسوار الشعر"
+          descreption="تقدم هذه الخدمة سشوار للشعر"
+          provider="سمية الزهراني"
+          price="120"
+          rating={2.3}
+        />
+        <ListItem
+          title="شسوار الشعر"
+          descreption="تقدم هذه الخدمة سشوار للشعر"
+          provider="سمية الزهراني"
+          price="120"
+          rating={2.3}
+        />
+        <ListItem
+          title="شسوار الشعر"
+          descreption="تقدم هذه الخدمة سشوار للشعر"
+          provider="سمية الزهراني"
+          price="120"
+          rating={2.3}
+        />
+        <ListItem
+          title="شسوار الشعر"
+          descreption="تقدم هذه الخدمة سشوار للشعر"
+          provider="سمية الزهراني"
+          price="120"
+          rating={2.3}
+        />
+        <ListItem
+          title="شسوار الشعر"
+          descreption="تقدم هذه الخدمة سشوار للشعر"
+          provider="سمية الزهراني"
+          price="120"
+          rating={2.3}
+        />
+        <ListItem
+          title="شسوار الشعر"
+          descreption="تقدم هذه الخدمة سشوار للشعر"
+          provider="سمية الزهراني"
+          price="120"
+          rating={2.3}
+        />
+        <ListItem
+          title="شسوار الشعر"
+          descreption="تقدم هذه الخدمة سشوار للشعر"
+          provider="سمية الزهراني"
+          price="120"
+          rating={2.3}
+        />
+        <ListItem
+          title="شسوار الشعر"
+          descreption="تقدم هذه الخدمة سشوار للشعر"
+          provider="سمية الزهراني"
+          price="120"
+          rating={2.3}
+        />
+        <ListItem
+          title="شسوار الشعر"
+          descreption="تقدم هذه الخدمة سشوار للشعر"
+          provider="سمية الزهراني"
+          price="120"
+          rating={2.3}
+        />
+        <ListItem
+          title="شسوار الشعر"
+          descreption="تقدم هذه الخدمة سشوار للشعر"
+          provider="سمية الزهراني"
+          price="120"
+          rating={2.3}
+        />
+        <ListItem
+          title="شسوار الشعر"
+          descreption="تقدم هذه الخدمة سشوار للشعر"
+          provider="سمية الزهراني"
+          price="120"
+          rating={2.3}
+        />
+        <ListItem
+          title="شسوار الشعر"
+          descreption="تقدم هذه الخدمة سشوار للشعر"
+          provider="سمية الزهراني"
+          price="120"
+          rating={2.3}
         />
         <ListItem
           title="شسوار الشعر"
