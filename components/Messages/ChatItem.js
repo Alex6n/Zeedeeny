@@ -49,30 +49,3 @@ export const ChatItem = ({
     </Pressable>
   );
 };
-
-// const ListItem = ({
-//   title,
-//   descreption,
-//   price,
-//   provider,
-//   offer,
-//   rating,
-//   image,
-// }) => {
-//   const [liked, setLiked] = useState(false);
-//   return (
-//     <Pressable className="flex-row gap-1 mx-20 my-1 justify-start items-center border border-gray-200 bg-pink-100/40 w-full h-28 py-1 rounded-2xl">
-//       {image ? (
-//         <Image
-//           className="aspect-square w-[100px] bg-slate-400/10 rounded-xl mb-1 object-cover"
-//           source={image}
-//         />
-//       ) : (
-//         <View className="flex items-center justify-center aspect-square w-[100px] bg-slate-400/10 rounded-xl mb-1">
-//           <ImageOff className="text-gray-400" />
-//         </View>
-//       )}
-
-//     </Pressable>
-//   );
-// };

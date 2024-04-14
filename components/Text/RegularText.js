@@ -18,7 +18,7 @@ export const RegularText = ({ children, classNames }) => {
   }, []);
 
   if (!fontLoaded) {
-    return <Text>Loading...</Text>;
+    return <Text className={classNames}>{children}</Text>;
   }
 
   return (

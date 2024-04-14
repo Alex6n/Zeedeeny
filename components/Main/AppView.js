@@ -4,6 +4,7 @@ import Home from "../Browser/Home";
 import NavMenu from "./NavMenu";
 import Categories from "../Categories/Categories";
 import { Chats } from "../Messages/Chats";
+import { AccountInfo } from "../Account/AccountInfo";
 
 const AppView = () => {
   const { selected } = useSelected();
@@ -14,6 +15,7 @@ const AppView = () => {
       {selected === "الرئيسية" && <Home />}
       {selected === "الأقسام" && <Categories />}
       {selected === "المحادثات" && <Chats />}
+      {selected === "الحساب" && <AccountInfo />}
       <NavMenu />
     </>
   );
