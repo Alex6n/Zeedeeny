@@ -2,10 +2,9 @@ import { View } from "react-native";
 import { SelectedProvider } from "./lib/selectedContext";
 import AppView from "./components/Main/AppView";
 
+// TODO: Work on more
+// TODO: Confirm initial app structure
 // TODO: Add filters dialog option to browser
-// TODO: Work on categories
-// TODO: Work on chat
-// TODO: Work on Account
 // TODO: Work on Product Page
 // TODO: Work on Service Provider
 // TODO: Work on Chat Simulation
