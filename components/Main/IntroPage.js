@@ -31,7 +31,7 @@ export default function Intro() {
             />
 
             <RegularText classNames="text-[#a0667092] mt-1 text-[18px] ">
-              نجيك
+              نجيكِ
             </RegularText>
           </Pressable>
           <Pressable
