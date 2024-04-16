@@ -5,6 +5,7 @@ import NavMenu from "./NavMenu";
 import Categories from "../Categories/Categories";
 import { Chats } from "../Messages/Chats";
 import { AccountInfo } from "../Account/AccountInfo";
+import { More } from "../More/More";
 
 const AppView = () => {
   const { selected } = useSelected();
@@ -16,6 +17,7 @@ const AppView = () => {
       {selected === "الأقسام" && <Categories />}
       {selected === "المحادثات" && <Chats />}
       {selected === "الحساب" && <AccountInfo />}
+      {selected === "المزيد" && <More />}
       <NavMenu />
     </>
   );

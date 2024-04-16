@@ -2,9 +2,6 @@ import { Image, Pressable, Text, View } from "react-native";
 import { BoldText } from "../Text/BoldText";
 import { RegularText } from "../Text/RegularText";
 
-// Manage Account
-// Convert to Provider
-
 export const AccountInfo = () => {
   return (
     <View className="h-full mt-[290px] mb-[61px] w-[95%]">
