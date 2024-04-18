@@ -4,10 +4,15 @@ import { useState } from "react";
 import { InfoView } from "./InfoView";
 import { InfoEdit } from "./InfoEdit";
 import { PassReset } from "./PassReset";
+import { useProvider } from "../../lib/providerState";
+
+// TODO: Change to provider (global state)
 
 export const AccountInfo = () => {
   const [manage, setManage] = useState(false);
   const [passReset, setPassReset] = useState(false);
+
+  const { provider, setProvider } = useProvider();
 
   return (
     <View className="h-full mt-[290px] mb-[61px] w-[95%]">
@@ -18,7 +23,7 @@ export const AccountInfo = () => {
         />
         <BoldText classNames="text-[16px]">رانيا الشريف</BoldText>
         <BoldText classNames="text-[12px] text-zinc-500 mb-4">
-          حساب مستخدمة
+          {provider ? "مقدمة خدمات" : "حساب مستخدمة"}
         </BoldText>
         {manage && !passReset && <InfoEdit />}
         {passReset && <PassReset />}
@@ -37,7 +42,9 @@ export const AccountInfo = () => {
           )}
           {!manage && !passReset && (
             <Pressable
-              className="items-center justify-center bg-pink-200/60 w-[49.5%] rounded-lg"
+              className={`items-center justify-center bg-pink-200/60 ${
+                provider ? "w-full" : "w-[49.5%]"
+              }  rounded-lg`}
               onPress={() => setManage(true)}
             >
               <BoldText classNames="text-[15px] text-pink-900">
@@ -58,8 +65,11 @@ export const AccountInfo = () => {
               </BoldText>
             </Pressable>
           )}
-          {!manage && !passReset && (
-            <Pressable className="items-center justify-center bg-pink-200/60 w-[49.5%] rounded-lg">
+          {!manage && !passReset && !provider && (
+            <Pressable
+              className="items-center justify-center bg-pink-200/60 w-[49.5%] rounded-lg"
+              onPress={() => setProvider(true)}
+            >
               <BoldText classNames="text-[15px] text-pink-900">
                 تقديم خدمات
               </BoldText>

@@ -1,18 +1,16 @@
 import ListContainer from "../Main/ListContainer";
 import { Option } from "./Option";
-import { BoldText } from "../Text/BoldText";
-import { View } from "react-native";
 
-// Extra: Rate the App, Feedback, Contact Support, Logout
+//
 
 export const More = () => {
   return (
     <ListContainer classNames="mt-[100px]">
-      <Option provider title="العملاء الحاليين" />
-      <Option provider title="سجل العملاء" />
-      <Option provider title="التعليم" />
-      <Option provider title="إدارة خدماتي" />
-      <Option provider title="أرباحي" />
+      <Option providerOnly title="العملاء الحاليين" />
+      <Option providerOnly title="سجل العملاء" />
+      <Option providerOnly title="التعليم" />
+      <Option providerOnly title="إدارة خدماتي" />
+      <Option providerOnly title="أرباحي" />
 
       <Option title="إدارة حجوزاتي" />
       <Option title="طلباتي السابقة" />

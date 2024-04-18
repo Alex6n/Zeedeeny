@@ -2,6 +2,15 @@ import LocationSelector from "./LocationSelector";
 import ListContainer from "../Main/ListContainer";
 import ListItem from "./ListItem";
 
+// TODO: Add data
+// TODO: Add filter prompt
+// TODO: Apply location selector
+
+// TODO: Add page for product or shop
+// TODO: Reserve option dialog
+
+// TODO: Add Provider Page
+
 const Home = () => {
   return (
     <>

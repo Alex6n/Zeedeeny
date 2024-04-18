@@ -31,14 +31,14 @@ export const InfoEdit = () => {
   return (
     <>
       <TextInput
-        className="flex-row-reverse h-10 w-[85%] bg-slate-300/10 border border-black/10 rounded my-1 p-2"
+        className="flex-row-reverse h-10 w-[85%] bg-slate-300/10 border border-black/10 rounded my-1 p-2 text-right"
         style={{ fontFamily: "DubaiW23-Medium" }}
         placeholder="الاسم العام"
         onChangeText={(newName) => onChangeData({ ...data, name: newName })}
         value={data.name}
       />
       <TextInput
-        className="flex-row-reverse h-10 w-[85%] bg-slate-300/10 border border-black/10 rounded my-1 p-2"
+        className="flex-row-reverse h-10 w-[85%] bg-slate-300/10 border border-black/10 rounded my-1 p-2 text-right"
         style={{ fontFamily: "DubaiW23-Medium" }}
         placeholder="اسم المستخدمة"
         onChangeText={(newUsername) =>
@@ -47,7 +47,7 @@ export const InfoEdit = () => {
         value={data.username}
       />
       <TextInput
-        className="flex-row-reverse h-10 w-[85%] bg-slate-300/10 border border-black/10 rounded my-1 p-2"
+        className="flex-row-reverse h-10 w-[85%] bg-slate-300/10 border border-black/10 rounded my-1 p-2 text-right"
         style={{ fontFamily: "DubaiW23-Medium" }}
         placeholder="رقم الهاتف"
         onChangeText={(newPhone) => onChangeData({ ...data, phone: newPhone })}
@@ -55,7 +55,7 @@ export const InfoEdit = () => {
         value={data.phone}
       />
       <TextInput
-        className="flex-row-reverse h-10 w-[85%] bg-slate-300/10 border border-black/10 rounded my-1 p-2"
+        className="flex-row-reverse h-10 w-[85%] bg-slate-300/10 border border-black/10 rounded my-1 p-2 text-right"
         style={{ fontFamily: "DubaiW23-Medium" }}
         placeholder="البريد الالكتروني"
         onChangeText={(newEmail) => onChangeData({ ...data, email: newEmail })}

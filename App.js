@@ -1,4 +1,5 @@
 import { View } from "react-native";
+import { ProviderStateProvider } from "./lib/providerState";
 import { SelectedProvider } from "./lib/selectedContext";
 import AppView from "./components/Main/AppView";
 
@@ -14,9 +15,11 @@ import AppView from "./components/Main/AppView";
 export default function App() {
   return (
     <View className="flex-1 justify-center items-center bg-white">
-      <SelectedProvider>
-        <AppView />
-      </SelectedProvider>
+      <ProviderStateProvider>
+        <SelectedProvider>
+          <AppView />
+        </SelectedProvider>
+      </ProviderStateProvider>
     </View>
   );
 }
