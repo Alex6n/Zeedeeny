@@ -6,8 +6,6 @@ import { InfoEdit } from "./InfoEdit";
 import { PassReset } from "./PassReset";
 import { useProvider } from "../../lib/providerState";
 
-// TODO: Change to provider (global state)
-
 export const AccountInfo = () => {
   const [manage, setManage] = useState(false);
   const [passReset, setPassReset] = useState(false);

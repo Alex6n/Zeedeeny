@@ -1,8 +1,6 @@
 import { Image, Pressable, View } from "react-native";
 import { RegularText } from "../Text/RegularText";
 
-// TODO: Navigate to browser (use expo Router)
-
 const Categories = () => {
   return (
     <View className="flex-wrap flex-row w-[90%] justify-center">

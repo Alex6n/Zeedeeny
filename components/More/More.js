@@ -1,8 +1,6 @@
 import ListContainer from "../Main/ListContainer";
 import { Option } from "./Option";
 
-//
-
 export const More = () => {
   return (
     <ListContainer classNames="mt-[100px]">
