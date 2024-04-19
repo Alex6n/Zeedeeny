@@ -2,6 +2,7 @@ import { View } from "react-native";
 import { ProviderStateProvider } from "./lib/providerState";
 import { SelectedProvider } from "./lib/selectedContext";
 import AppView from "./components/Main/AppView";
+import { LocationProvider } from "./lib/locationContext";
 
 // TODO: Work on Product Page
 // TODO: Work on Service Provider
@@ -11,11 +12,13 @@ import AppView from "./components/Main/AppView";
 export default function App() {
   return (
     <View className="flex-1 justify-center items-center bg-white">
-      <ProviderStateProvider>
-        <SelectedProvider>
-          <AppView />
-        </SelectedProvider>
-      </ProviderStateProvider>
+      <SelectedProvider>
+        <ProviderStateProvider>
+          <LocationProvider>
+            <AppView />
+          </LocationProvider>
+        </ProviderStateProvider>
+      </SelectedProvider>
     </View>
   );
 }

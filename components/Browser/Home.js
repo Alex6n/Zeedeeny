@@ -1,6 +1,7 @@
 import LocationSelector from "./LocationSelector";
 import ListContainer from "../Main/ListContainer";
 import ListItem from "./ListItem";
+import { useLocation } from "../../lib/locationContext";
 
 // TODO: Add data
 // TODO: Apply location selector
@@ -20,6 +21,7 @@ const providersList = [
     category: "hair_care",
     image: require("../../assets/wellaproblogcurlyhaircareimage1.jpg"),
     rating: 4,
+    type: "provider",
   },
   {
     title: "خدمة استشوار الشعر",
@@ -30,6 +32,7 @@ const providersList = [
     category: "hair_dry",
     image: require("../../assets/Blow-Dry-.jpg"),
     rating: 3,
+    type: "provider",
   },
   {
     title: "خدمة قص الشعر",
@@ -39,6 +42,7 @@ const providersList = [
     category: "hair_cut",
     image: require("../../assets/image-80.png"),
     rating: 3,
+    type: "provider",
   },
   {
     title: "خدمة إزالة الشعر",
@@ -49,6 +53,7 @@ const providersList = [
     category: "hair_removal",
     image: require("../../assets/hair-de2fe0f99.jpg"),
     rating: 4,
+    type: "provider",
   },
   {
     title: "خدمة العناية بالشعر الطويل",
@@ -59,6 +64,7 @@ const providersList = [
     category: "hair_care",
     image: require("../../assets/hair-growth.jpg"),
     rating: 4,
+    type: "provider",
   },
   {
     title: "خدمة استشوار الشعر الكيرلي",
@@ -68,6 +74,7 @@ const providersList = [
     category: "hair_dry",
     image: require("../../assets/intro-1663610670.jpg"),
     rating: 4,
+    type: "provider",
   },
   {
     title: "خدمة قص الشعر",
@@ -77,6 +84,7 @@ const providersList = [
     category: "hair_cut",
     image: require("../../assets/ddc38ec4d9b3b0815115364a7367d444.jpg"),
     rating: 2,
+    type: "provider",
   },
   {
     title: "خدمة الواكس البرازيلي",
@@ -86,6 +94,7 @@ const providersList = [
     category: "hair_removal",
     image: require("../../assets/GettyImagdc84630e.jpg"),
     rating: 5,
+    type: "provider",
   },
   {
     title: "خدمة العناية بالشعر",
@@ -95,6 +104,7 @@ const providersList = [
     category: "hair_care",
     image: require("../../assets/01_Haircare_.jpg"),
     rating: 3,
+    type: "provider",
   },
   {
     title: "خدمة إزالة الشعر بالليزر",
@@ -104,6 +114,7 @@ const providersList = [
     category: "hair_removal",
     image: require("../../assets/images.jpeg"),
     rating: 5,
+    type: "provider",
   },
   {
     title: "حمام شعر",
@@ -114,26 +125,44 @@ const providersList = [
     category: "hair_care",
     image: require("../../assets/example.jpeg"),
     rating: 2,
+    type: "provider",
+  },
+  {
+    title: "مركز",
+    descreption: "وصف",
+    provider: "مركز",
+    price: "20",
+    category: "hair_care",
+    rating: 0,
+    type: "shop",
   },
 ];
 
 const Home = () => {
+  const { location } = useLocation();
+
   return (
     <>
       <LocationSelector />
       <ListContainer>
-        {providersList.map((item, index) => (
-          <ListItem
-            key={index}
-            title={item.title}
-            descreption={item.descreption}
-            image={item.image}
-            offer={item.offer ? item.offer : false}
-            provider={item.provider}
-            price={item.price}
-            rating={item.rating}
-          />
-        ))}
+        {providersList
+          .filter((item) =>
+            location === "نجيكِ"
+              ? item.type === "provider"
+              : item.type === "shop"
+          )
+          .map((item, index) => (
+            <ListItem
+              key={index}
+              title={item.title}
+              descreption={item.descreption}
+              image={item.image}
+              offer={item.offer ? item.offer : false}
+              provider={item.provider}
+              price={item.price}
+              rating={item.rating}
+            />
+          ))}
       </ListContainer>
     </>
   );

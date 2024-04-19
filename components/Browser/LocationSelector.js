@@ -1,9 +1,9 @@
-import { useState } from "react";
 import { Pressable, View } from "react-native";
 import { BoldText } from "../Text/BoldText";
+import { useLocation } from "../../lib/locationContext";
 
 const LocationSelector = () => {
-  const [location, setLocation] = useState("نجيكِ");
+  const { location, setLocation } = useLocation();
 
   return (
     <View className="w-full h-12 mt-[88px] fixed flex-row justify-center items-center">
