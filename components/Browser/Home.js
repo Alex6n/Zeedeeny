@@ -2,11 +2,9 @@ import LocationSelector from "./LocationSelector";
 import ListContainer from "../Main/ListContainer";
 import ListItem from "./ListItem";
 import { useLocation } from "../../lib/locationContext";
+import { useSelected } from "../../lib/selectedContext";
 
-// TODO: Add data
-// TODO: Apply location selector
 // TODO: Add filter prompt
-// TODO: filter through categories
 // TODO: Add page for product or shop
 // TODO: Reserve option dialog
 
@@ -18,7 +16,7 @@ const providersList = [
     descreption: "توفر هذه الخدمة العناية بالشعر الكيرلي",
     provider: "سارة الثقفي",
     price: "120",
-    category: "hair_care",
+    category: "العناية بالشعر",
     image: require("../../assets/wellaproblogcurlyhaircareimage1.jpg"),
     rating: 4,
     type: "provider",
@@ -29,7 +27,7 @@ const providersList = [
     provider: "خديجة عامر",
     offer: "10%",
     price: "60",
-    category: "hair_dry",
+    category: "الاستشوار",
     image: require("../../assets/Blow-Dry-.jpg"),
     rating: 3,
     type: "provider",
@@ -39,7 +37,7 @@ const providersList = [
     descreption: "توفر هذه الخدمة قص الشعر",
     provider: "أميرة القحطاني",
     price: "90",
-    category: "hair_cut",
+    category: "قص الشعر",
     image: require("../../assets/image-80.png"),
     rating: 3,
     type: "provider",
@@ -50,7 +48,7 @@ const providersList = [
     provider: "أريج العتيبي",
     price: "130",
     offer: "25%",
-    category: "hair_removal",
+    category: "إزالة الشعر",
     image: require("../../assets/hair-de2fe0f99.jpg"),
     rating: 4,
     type: "provider",
@@ -61,7 +59,7 @@ const providersList = [
     provider: "فاطمة الطويل",
     price: "210",
     offer: "30%",
-    category: "hair_care",
+    category: "العناية بالشعر",
     image: require("../../assets/hair-growth.jpg"),
     rating: 4,
     type: "provider",
@@ -71,7 +69,7 @@ const providersList = [
     descreption: "توفر هذه الخدمة استشوار الشعر الكيرلي",
     provider: "خديجة عامر",
     price: "100",
-    category: "hair_dry",
+    category: "الاستشوار",
     image: require("../../assets/intro-1663610670.jpg"),
     rating: 4,
     type: "provider",
@@ -81,7 +79,7 @@ const providersList = [
     descreption: "توفر هذه الخدمة قص الشعر",
     provider: "سارة الثقفي",
     price: "50",
-    category: "hair_cut",
+    category: "قص الشعر",
     image: require("../../assets/ddc38ec4d9b3b0815115364a7367d444.jpg"),
     rating: 2,
     type: "provider",
@@ -91,7 +89,7 @@ const providersList = [
     descreption: "توفر هذه الخدمة إزالة شعر الجسم بالشمع",
     provider: "أريج العتيبي",
     price: "200",
-    category: "hair_removal",
+    category: "إزالة الشعر",
     image: require("../../assets/GettyImagdc84630e.jpg"),
     rating: 5,
     type: "provider",
@@ -101,7 +99,7 @@ const providersList = [
     descreption: "توفر هذه الخدمة العناية بالشعر",
     provider: "ريم صالح",
     price: "180",
-    category: "hair_care",
+    category: "العناية بالشعر",
     image: require("../../assets/01_Haircare_.jpg"),
     rating: 3,
     type: "provider",
@@ -111,7 +109,7 @@ const providersList = [
     descreption: "توفر هذه الخدمة إزالة شعر الجسم بالليزر",
     provider: "حورية سطام",
     price: "310",
-    category: "hair_removal",
+    category: "إزالة الشعر",
     image: require("../../assets/images.jpeg"),
     rating: 5,
     type: "provider",
@@ -122,7 +120,7 @@ const providersList = [
     provider: "لطيفة الغامدي",
     price: "80",
     offer: "10%",
-    category: "hair_care",
+    category: "العناية بالشعر",
     image: require("../../assets/example.jpeg"),
     rating: 2,
     type: "provider",
@@ -132,7 +130,7 @@ const providersList = [
     descreption: "وصف",
     provider: "مركز",
     price: "20",
-    category: "hair_care",
+    category: "العناية بالشعر",
     rating: 0,
     type: "shop",
   },
@@ -140,6 +138,7 @@ const providersList = [
 
 const Home = () => {
   const { location } = useLocation();
+  const { selected } = useSelected();
 
   return (
     <>
@@ -150,6 +149,9 @@ const Home = () => {
             location === "نجيكِ"
               ? item.type === "provider"
               : item.type === "shop"
+          )
+          .filter((item) =>
+            selected !== "الرئيسية" ? item.category === selected : item
           )
           .map((item, index) => (
             <ListItem

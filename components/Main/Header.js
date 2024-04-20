@@ -11,9 +11,22 @@ export default function Header() {
   const { selected } = useSelected();
   const [modalVisible, setModalVisible] = useState(false);
 
+  let Browser = [
+    "العناية بالشعر",
+    "إزالة الشعر",
+    "قص الشعر",
+    "الاستشوار",
+    "المكياج",
+    "صبغ الشعر",
+    "العناية بالجسم",
+    "تدليك",
+    "الخياطة",
+    "الرئيسية",
+  ];
+
   return (
     <View className="bg-[#bd85a69b] flex justify-end items-center absolute top-0 w-full h-[87px]">
-      {selected === "الرئيسية" && (
+      {Browser.includes(selected) && (
         <Pressable
           className="absolute left-3 top-[55px]"
           onPress={() => setModalVisible(true)}

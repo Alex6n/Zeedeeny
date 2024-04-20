@@ -10,10 +10,23 @@ import { More } from "../More/More";
 const AppView = () => {
   const { selected } = useSelected();
 
+  let Browser = [
+    "العناية بالشعر",
+    "إزالة الشعر",
+    "قص الشعر",
+    "الاستشوار",
+    "المكياج",
+    "صبغ الشعر",
+    "العناية بالجسم",
+    "تدليك",
+    "الخياطة",
+    "الرئيسية",
+  ];
+
   return (
     <>
       <Header />
-      {selected === "الرئيسية" && <Home />}
+      {Browser.includes(selected) && <Home />}
       {selected === "الأقسام" && <Categories />}
       {selected === "المحادثات" && <Chats />}
       {selected === "الحساب" && <AccountInfo />}
