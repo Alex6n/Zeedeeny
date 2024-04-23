@@ -6,9 +6,12 @@ import Categories from "../Categories/Categories";
 import { Chats } from "../Messages/Chats";
 import { AccountInfo } from "../Account/AccountInfo";
 import { More } from "../More/More";
+import { ItemPage } from "../Browser/ItemPage";
+import { useItems } from "../../lib/ItemsContext";
 
 const AppView = () => {
   const { selected } = useSelected();
+  const { items } = useItems();
 
   let Browser = [
     "العناية بالشعر",
@@ -27,6 +30,7 @@ const AppView = () => {
     <>
       <Header />
       {Browser.includes(selected) && <Home />}
+      {items.includes(selected) && <ItemPage />}
       {selected === "الأقسام" && <Categories />}
       {selected === "المحادثات" && <Chats />}
       {selected === "الحساب" && <AccountInfo />}

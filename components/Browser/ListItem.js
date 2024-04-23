@@ -1,8 +1,9 @@
-import { Image, Pressable, View, Text } from "react-native";
+import { Image, Pressable, View } from "react-native";
 import { Heart, ImageOff, Share2, Star } from "lucide-react-native";
 import { useState } from "react";
 import { RegularText } from "../Text/RegularText";
 import { BoldText } from "../Text/BoldText";
+import { useSelected } from "../../lib/selectedContext";
 
 const ListItem = ({
   title,
@@ -13,9 +14,13 @@ const ListItem = ({
   rating,
   image,
 }) => {
+  const { setSelected } = useSelected();
   const [liked, setLiked] = useState(false);
   return (
-    <Pressable className="flex-row gap-1 mx-20 my-1 justify-start items-center border border-gray-200 bg-pink-100/40 w-full h-28 py-1 rounded-2xl">
+    <Pressable
+      className="flex-row gap-1 mx-20 my-1 justify-start items-center border border-gray-200 bg-pink-100/40 w-full h-28 py-1 rounded-2xl"
+      onPress={() => setSelected(title)}
+    >
       {image ? (
         <Image
           className="aspect-square w-[100px] bg-slate-400/10 rounded-xl mb-1 object-cover"
