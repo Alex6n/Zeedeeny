@@ -30,7 +30,7 @@ const AppView = () => {
     <>
       <Header />
       {Browser.includes(selected) && <Home />}
-      {items.includes(selected) && <ItemPage />}
+      {JSON.stringify(items).includes(selected) && <ItemPage />}
       {selected === "الأقسام" && <Categories />}
       {selected === "المحادثات" && <Chats />}
       {selected === "الحساب" && <AccountInfo />}

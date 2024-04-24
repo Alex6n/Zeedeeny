@@ -37,6 +37,7 @@ const Home = () => {
               image={item.image}
               offer={item.offer ? item.offer : false}
               provider={item.provider}
+              liked={item.liked}
               price={item.price}
               rating={item.rating}
             />

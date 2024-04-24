@@ -4,6 +4,7 @@ import { useState } from "react";
 import { RegularText } from "../Text/RegularText";
 import { BoldText } from "../Text/BoldText";
 import { useSelected } from "../../lib/selectedContext";
+import { useItems } from "../../lib/ItemsContext";
 
 const ListItem = ({
   title,
@@ -12,10 +13,12 @@ const ListItem = ({
   provider,
   offer,
   rating,
+  liked,
   image,
 }) => {
   const { setSelected } = useSelected();
-  const [liked, setLiked] = useState(false);
+  const { items, setItems } = useItems();
+
   return (
     <Pressable
       className="flex-row gap-1 mx-20 my-1 justify-start items-center border border-gray-200 bg-pink-100/40 w-full h-28 py-1 rounded-2xl"
@@ -75,7 +78,17 @@ const ListItem = ({
               {price} RS
             </RegularText>
             <View className="flex-row-reverse gap-4">
-              <Pressable onPress={() => setLiked(!liked)}>
+              <Pressable
+                onPress={() => {
+                  const updatedItems = items.map((i) => {
+                    if (i.title === title) {
+                      return { ...i, liked: !i.liked };
+                    }
+                    return i;
+                  });
+                  setItems(updatedItems);
+                }}
+              >
                 <Heart
                   fill={liked ? "red" : "none"}
                   className={`max-w-[20px] max-h-[20px] ${
