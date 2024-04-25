@@ -19,7 +19,7 @@ const Home = () => {
   return (
     <>
       <LocationSelector />
-      <ListContainer>
+      <ListContainer classNames="w-full">
         {items
           .filter((item) =>
             location === "نجيكِ"
@@ -34,7 +34,7 @@ const Home = () => {
               key={index}
               title={item.title}
               descreption={item.descreption}
-              image={item.image}
+              image={item.image ? item.image : false}
               offer={item.offer ? item.offer : false}
               provider={item.provider}
               liked={item.liked}

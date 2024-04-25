@@ -3,7 +3,7 @@ import { Option } from "./Option";
 
 export const More = () => {
   return (
-    <ListContainer classNames="mt-[100px]">
+    <ListContainer classNames="mt-[100px] w-full">
       <Option providerOnly title="العملاء الحاليين" />
       <Option providerOnly title="سجل العملاء" />
       <Option providerOnly title="التعليم" />

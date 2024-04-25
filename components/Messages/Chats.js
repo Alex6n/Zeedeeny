@@ -5,7 +5,7 @@ import { ChatItem } from "./ChatItem";
 
 export const Chats = () => {
   return (
-    <ListContainer classNames="mt-[88px]">
+    <ListContainer classNames="mt-[88px] w-full">
       <ChatItem
         author="رويدة الحداد"
         image={require("../../assets/users/user-1.png")}
