@@ -9,7 +9,7 @@ import ListContainer from "../Main/ListContainer";
 // TODO : Convert to galary mode instead of only one thumbnail
 
 export const ItemPage = () => {
-  const { selected } = useSelected();
+  const { selected, setSelected } = useSelected();
   const { items, setItems } = useItems();
 
   const item = items.filter((i) => i.title === selected)[0];
@@ -93,7 +93,10 @@ export const ItemPage = () => {
           <Pressable className="items-center justify-center bg-pink-200/60 w-[49.5%] rounded-lg">
             <BoldText classNames="text-[15px] text-pink-900">حجز موعد</BoldText>
           </Pressable>
-          <Pressable className="items-center justify-center bg-pink-200/40 w-[49.5%] rounded-lg">
+          <Pressable
+            className="items-center justify-center bg-pink-200/40 w-[49.5%] rounded-lg"
+            onPress={() => setSelected("ملف مقدمة الخدمة")}
+          >
             <BoldText classNames="text-[15px] text-pink-900">
               ملف مقدم الخدمة
             </BoldText>
@@ -104,7 +107,7 @@ export const ItemPage = () => {
             تعليقات العملاء :
           </BoldText>
         </View>
-        <ListContainer classNames="w-[100%] max-h-[300px]">
+        <ListContainer classNames="w-[100%] max-h-[270px]">
           <View className="flex-row-reverse gap-1 mx-20 my-[1px] justify-start items-center w-[85%] h-34 bg-[#fff5fa] rounded-xl border-[3px] border-white py-2 h-20">
             <Image
               className="aspect-square w-[50px] rounded-full mx-2 mb-1 object-cover"
@@ -146,23 +149,23 @@ export const ItemPage = () => {
             <View className="flex-1 mr-2 items-end text-ellipsis">
               <View className="flex-row-reverse w-full my-1 h-5">
                 <BoldText classNames="text-zinc-500 text-[12px] truncate">
-                  سارة المطيري
+                  جواهر سعد
                 </BoldText>
               </View>
 
               <RegularText classNames="text-black text-xs truncate h-4">
-                الخدمة ممتازة بس كان فيه تأخر عن الموعد
+                الخدمة ممتاز
               </RegularText>
 
               <View className="flex-row mb-2">
-                {[...Array(Math.round(2))].map((_, index) => (
+                {[...Array(Math.round(3))].map((_, index) => (
                   <Star
                     key={index}
                     fill="rgb(252 211 77)"
                     className="max-w-[16px] max-h-[16px]"
                   />
                 ))}
-                {[...Array(5 - 2)].map((_, index) => (
+                {[...Array(5 - 3)].map((_, index) => (
                   <Star
                     key={index}
                     fill="rgb(209 213 219)"
@@ -205,10 +208,43 @@ export const ItemPage = () => {
               </View>
             </View>
           </View>
+          <View className="flex-row-reverse gap-1 mx-20 my-[1px] justify-start items-center w-[85%] h-34 bg-[#fff5fa] rounded-xl border-[3px] border-white py-2 h-20">
+            <View className="flex items-center justify-center aspect-square w-[50px] bg-white/80 rounded-full border border-gray-400/10 mx-2 mb-1">
+              <User className="text-gray-400" />
+            </View>
+            <View className="flex-1 mr-2 items-end text-ellipsis">
+              <View className="flex-row-reverse w-full my-1 h-5">
+                <BoldText classNames="text-zinc-500 text-[12px] truncate">
+                  حصة مشعل
+                </BoldText>
+              </View>
+
+              <RegularText classNames="text-black text-xs truncate h-4">
+                سعر الخدمة مبالغ فيه شوي
+              </RegularText>
+
+              <View className="flex-row mb-2">
+                {[...Array(Math.round(2))].map((_, index) => (
+                  <Star
+                    key={index}
+                    fill="rgb(252 211 77)"
+                    className="max-w-[16px] max-h-[16px]"
+                  />
+                ))}
+                {[...Array(5 - 2)].map((_, index) => (
+                  <Star
+                    key={index}
+                    fill="rgb(209 213 219)"
+                    className="max-w-[16px] max-h-[16px]"
+                  />
+                ))}
+              </View>
+            </View>
+          </View>
         </ListContainer>
         <Pressable className="absolute top-[489.5px] border-t-8 border-white items-center justify-center w-full bg-[#FDE2F1] h-[55px] rounded-t-xl">
           <BoldText classNames="text-[15px] tracking-widest	text-pink-900">
-            مــحــادثــة {item.provider}
+            التواصل مع مقدمة الخدمة
           </BoldText>
         </Pressable>
       </View>

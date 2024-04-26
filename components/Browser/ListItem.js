@@ -21,7 +21,7 @@ const ListItem = ({
 
   return (
     <Pressable
-      className="flex-row gap-1 mx-20 my-1 justify-start items-center border border-gray-200 bg-pink-100/40 w-full h-28 py-1 rounded-2xl"
+      className="flex-row gap-1 mx-20 my-1 justify-start items-center bg-pink-100/40 w-full h-28 py-1 rounded-2xl"
       onPress={() => setSelected(title)}
     >
       {image ? (

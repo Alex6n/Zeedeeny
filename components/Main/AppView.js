@@ -8,6 +8,7 @@ import { AccountInfo } from "../Account/AccountInfo";
 import { More } from "../More/More";
 import { ItemPage } from "../Browser/ItemPage";
 import { useItems } from "../../lib/ItemsContext";
+import { ProviderPage } from "../Browser/ProviderPage";
 
 const AppView = () => {
   const { selected } = useSelected();
@@ -30,7 +31,8 @@ const AppView = () => {
     <>
       <Header />
       {Browser.includes(selected) && <Home />}
-      {JSON.stringify(items).includes(selected) && <ItemPage />}
+      {items.some((item) => item.title === selected) && <ItemPage />}
+      {selected === "ملف مقدمة الخدمة" && <ProviderPage />}
       {selected === "الأقسام" && <Categories />}
       {selected === "المحادثات" && <Chats />}
       {selected === "الحساب" && <AccountInfo />}
