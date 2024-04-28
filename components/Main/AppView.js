@@ -9,6 +9,7 @@ import { More } from "../More/More";
 import { ItemPage } from "../Browser/ItemPage";
 import { useItems } from "../../lib/ItemsContext";
 import { ProviderPage } from "../Browser/ProviderPage";
+import { Booking } from "../Browser/Booking";
 
 const AppView = () => {
   const { selected } = useSelected();
@@ -33,6 +34,7 @@ const AppView = () => {
       {Browser.includes(selected) && <Home />}
       {items.some((item) => item.title === selected) && <ItemPage />}
       {selected === "ملف مقدمة الخدمة" && <ProviderPage />}
+      {selected === "حجز موعد" && <Booking />}
       {selected === "الأقسام" && <Categories />}
       {selected === "المحادثات" && <Chats />}
       {selected === "الحساب" && <AccountInfo />}

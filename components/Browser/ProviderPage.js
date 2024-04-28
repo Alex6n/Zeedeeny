@@ -1,15 +1,7 @@
 import { Image, Pressable, ScrollView, View } from "react-native";
 import { useItems } from "../../lib/ItemsContext";
 import { useSelected } from "../../lib/selectedContext";
-import {
-  BadgeCheck,
-  BadgeCheckIcon,
-  Heart,
-  ImageOff,
-  Share,
-  Star,
-  User,
-} from "lucide-react-native";
+import { BadgeCheckIcon, Star } from "lucide-react-native";
 import { RegularText } from "../Text/RegularText";
 import { BoldText } from "../Text/BoldText";
 import ListContainer from "../Main/ListContainer";
@@ -21,8 +13,8 @@ export const ProviderPage = () => {
 
   return (
     <>
-      <View className="top-[160px] w-full h-[100%] items-center">
-        <View className="relative w-[70%] flex-row justify-center h-[140px] bg-[#fff5fa] rounded-3xl border-[3px] border-pink-700/10 p-2">
+      <View className="top-[140px] w-full h-[100%] items-center">
+        <View className="relative w-[100%] flex-row justify-center h-[140px] bg-[#fff5fa] p-2">
           <Image
             className="absolute bottom-14 h-[100px] w-[100px] rounded-full mx-2 my-1 object-cover"
             source={require("../../assets/users/user-2.png")}
@@ -51,7 +43,6 @@ export const ProviderPage = () => {
             </View>
           </View>
         </View>
-
         <View className="justify-end items-end w-[85%] my-2 mt-4">
           <BoldText classNames="text-pink-900/80 text-[14px]">
             الخدمات :
@@ -87,7 +78,7 @@ export const ProviderPage = () => {
             rating={3}
           />
         </ListContainer>
-        <Pressable className="absolute top-[550.5px] border-t-8 border-white items-center justify-center w-full bg-[#FDE2F1] h-[55px] rounded-t-xl">
+        <Pressable className="absolute top-[569.5px] border-t-8 border-white items-center justify-center w-full bg-[#FDE2F1] h-[55px] rounded-t-xl">
           <BoldText classNames="text-[15px] tracking-widest	text-pink-900">
             التواصل مع مقدمة الخدمة
           </BoldText>

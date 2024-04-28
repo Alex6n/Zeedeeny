@@ -90,7 +90,10 @@ export const ItemPage = () => {
           </View>
         </View>
         <View className="flex-row-reverse h-10 w-[85%] my-1 justify-between">
-          <Pressable className="items-center justify-center bg-pink-200/60 w-[49.5%] rounded-lg">
+          <Pressable
+            className="items-center justify-center bg-pink-200/60 w-[49.5%] rounded-lg"
+            onPress={() => setSelected("حجز موعد")}
+          >
             <BoldText classNames="text-[15px] text-pink-900">حجز موعد</BoldText>
           </Pressable>
           <Pressable
