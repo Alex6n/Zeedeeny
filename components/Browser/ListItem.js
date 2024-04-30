@@ -1,6 +1,5 @@
 import { Image, Pressable, View } from "react-native";
 import { Heart, ImageOff, Share2, Star } from "lucide-react-native";
-import { useState } from "react";
 import { RegularText } from "../Text/RegularText";
 import { BoldText } from "../Text/BoldText";
 import { useSelected } from "../../lib/selectedContext";

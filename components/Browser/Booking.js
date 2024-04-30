@@ -1,6 +1,6 @@
 import { Pressable, View } from "react-native";
 import { BoldText } from "../Text/BoldText";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { RegularText } from "../Text/RegularText";
 import DateTimePicker from "@react-native-community/datetimepicker";
 

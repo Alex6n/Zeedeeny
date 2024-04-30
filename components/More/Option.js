@@ -3,13 +3,14 @@ import { RegularText } from "../Text/RegularText";
 import { useState } from "react";
 import { useProvider } from "../../lib/providerState";
 
-export const Option = ({ title, providerOnly }) => {
+export const Option = ({ title, providerOnly, pressAction }) => {
   const { provider } = useProvider();
 
   const [pressed, setPressed] = useState(false);
 
   return (
     <Pressable
+      onPress={pressAction}
       onPressIn={() => setPressed(true)}
       onPressOut={() => setPressed(false)}
       className={`${providerOnly ? (provider ? "" : "hidden") : ""} ${

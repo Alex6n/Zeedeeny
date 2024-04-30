@@ -1,4 +1,4 @@
-import { Image, Pressable, ScrollView, View } from "react-native";
+import { Image, Pressable, View } from "react-native";
 import { useItems } from "../../lib/ItemsContext";
 import { useSelected } from "../../lib/selectedContext";
 import { Heart, ImageOff, Share, Star, User } from "lucide-react-native";

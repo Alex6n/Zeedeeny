@@ -5,12 +5,6 @@ import { useLocation } from "../../lib/locationContext";
 import { useSelected } from "../../lib/selectedContext";
 import { useItems } from "../../lib/ItemsContext";
 
-// TODO: Add filter prompt
-// TODO: Add page for product or shop
-// TODO: Reserve option dialog
-
-// TODO: Add Provider Page
-
 const Home = () => {
   const { location } = useLocation();
   const { selected } = useSelected();

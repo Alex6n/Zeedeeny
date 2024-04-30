@@ -8,11 +8,16 @@ import {
 } from "react-native";
 import { BoldText } from "../Text/BoldText";
 import { RegularText } from "../Text/RegularText";
+import { useSelected } from "../../lib/selectedContext";
+import { useLocation } from "../../lib/locationContext";
 
 export default function Intro() {
+  const { setSelected } = useSelected();
+  const { setLocation } = useLocation();
+
   return (
     <ImageBackground
-      className="w-full h-full"
+      className="w-full"
       source={require("../../assets/bg.jpg")}
       resizeMode="cover"
     >
@@ -23,7 +28,10 @@ export default function Intro() {
         <View className="flex-row gap-5">
           <Pressable
             className="flex justify-center items-center rounded-full border-2 border-gray-400/20 w-[135] py-4"
-            onPress={() => {}}
+            onPress={() => {
+              setSelected("الرئيسية");
+              setLocation("نجيكِ");
+            }}
           >
             <Image
               className="w-[63px] h-[63px]"
@@ -36,7 +44,10 @@ export default function Intro() {
           </Pressable>
           <Pressable
             className="flex justify-center items-center rounded-full border-2 border-gray-400/20 w-[135] py-4"
-            onPress={() => {}}
+            onPress={() => {
+              setSelected("الرئيسية");
+              setLocation("تجينا");
+            }}
           >
             <Image
               className="w-[63px] h-[63px]"

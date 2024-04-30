@@ -1,5 +1,4 @@
-import { Image, Pressable, ScrollView, View } from "react-native";
-import { useItems } from "../../lib/ItemsContext";
+import { Image, Pressable, View } from "react-native";
 import { useSelected } from "../../lib/selectedContext";
 import { BadgeCheckIcon, Star } from "lucide-react-native";
 import { RegularText } from "../Text/RegularText";
@@ -8,8 +7,7 @@ import ListContainer from "../Main/ListContainer";
 import ListItem from "./ListItem";
 
 export const ProviderPage = () => {
-  const { selected, setSelected } = useSelected();
-  const { items, setItems } = useItems();
+  const { setSelected } = useSelected();
 
   return (
     <>
