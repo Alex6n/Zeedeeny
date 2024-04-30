@@ -10,6 +10,7 @@ import { ItemPage } from "../Browser/ItemPage";
 import { useItems } from "../../lib/ItemsContext";
 import { ProviderPage } from "../Browser/ProviderPage";
 import { Booking } from "../Browser/Booking";
+import { Conversation } from "../Messages/Conversation";
 
 const AppView = () => {
   const { selected } = useSelected();
@@ -35,6 +36,7 @@ const AppView = () => {
       {items.some((item) => item.title === selected) && <ItemPage />}
       {selected === "ملف مقدمة الخدمة" && <ProviderPage />}
       {selected === "حجز موعد" && <Booking />}
+      {selected === "محادثة" && <Conversation />}
       {selected === "الأقسام" && <Categories />}
       {selected === "المحادثات" && <Chats />}
       {selected === "الحساب" && <AccountInfo />}

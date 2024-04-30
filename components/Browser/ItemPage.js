@@ -245,7 +245,10 @@ export const ItemPage = () => {
             </View>
           </View>
         </ListContainer>
-        <Pressable className="absolute top-[489.5px] border-t-8 border-white items-center justify-center w-full bg-[#FDE2F1] h-[55px] rounded-t-xl">
+        <Pressable
+          onPress={() => setSelected("محادثة")}
+          className="absolute top-[489.5px] border-t-8 border-white items-center justify-center w-full bg-[#FDE2F1] h-[55px] rounded-t-xl"
+        >
           <BoldText classNames="text-[15px] tracking-widest	text-pink-900">
             التواصل مع مقدمة الخدمة
           </BoldText>
