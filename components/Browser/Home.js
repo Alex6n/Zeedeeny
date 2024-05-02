@@ -21,7 +21,12 @@ const Home = () => {
               : item.type === "shop"
           )
           .filter((item) =>
-            selected !== "الرئيسية" ? item.category === selected : item
+            selected !== "الرئيسية" && selected !== "المفضلة"
+              ? item.category === selected
+              : item
+          )
+          .filter((item) =>
+            selected === "المفضلة" ? item.liked === true : item
           )
           .map((item, index) => (
             <ListItem

@@ -15,7 +15,7 @@ export const More = () => {
 
       <Option title="إدارة حجوزاتي" />
       <Option title="طلباتي السابقة" />
-      <Option title="المفضلة" />
+      <Option pressAction={() => setSelected("المفضلة")} title="المفضلة" />
       <Option title="الدفع" />
       <Option title="تقييم التطبيق" />
       <Option title="بلغ عن مشكلة" />

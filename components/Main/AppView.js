@@ -18,6 +18,7 @@ const AppView = () => {
   const { items } = useItems();
 
   let Browser = [
+    "المفضلة",
     "العناية بالشعر",
     "إزالة الشعر",
     "قص الشعر",
