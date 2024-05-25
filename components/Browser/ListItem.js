@@ -20,7 +20,7 @@ const ListItem = ({
 
   return (
     <Pressable
-      className="flex-row gap-1 mx-20 my-1 justify-start items-center bg-pink-100/70 w-full h-28 py-1 rounded-xl"
+      className="flex-row gap-1 mx-20 my-1 justify-start items-center bg-primary-900/70 w-full h-28 py-1 rounded-xl"
       onPress={() => setSelected(title)}
     >
       {image ? (
@@ -39,7 +39,7 @@ const ListItem = ({
           <BoldText classNames="text-black truncate w-[73%]">{title}</BoldText>
           {offer && (
             <View className="flex items-center justify-center h-[19]">
-              <RegularText classNames="text-white text-[10px] rounded-md bg-rose-600/90 p-[2px] px-[4px]">
+              <RegularText classNames="text-white text-[10px] rounded-md bg-accent-500/90 p-[2px] px-[4px]">
                 {offer} OFFER
               </RegularText>
             </View>
@@ -50,7 +50,7 @@ const ListItem = ({
           {descreption}
         </RegularText>
 
-        <RegularText classNames="text-[#633e539b] text-[10px] truncate mb-1">
+        <RegularText classNames="text-text-200 text-[10px] truncate mb-1">
           مقدمة الخدمة : {provider}
         </RegularText>
 
@@ -73,7 +73,7 @@ const ListItem = ({
           </View>
 
           <View className="flex-row-reverse justify-between items-center w-32">
-            <RegularText classNames="text-sm text-green-600">
+            <RegularText classNames="text-sm text-green-700">
               {price} RS
             </RegularText>
             <View className="flex-row-reverse gap-4">

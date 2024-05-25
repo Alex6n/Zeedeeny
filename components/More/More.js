@@ -18,7 +18,7 @@ export const More = () => {
       <Option pressAction={() => setSelected("المفضلة")} title="المفضلة" />
       <Option title="الدفع" />
       <Option title="تقييم التطبيق" />
-      <Option title="بلغ عن مشكلة" />
+      <Option title="بلغي عن مشكلة" />
       <Option title="الدعم الفني" />
       <Option pressAction={() => setSelected("intro")} title="تسجيل الخروج" />
     </ListContainer>

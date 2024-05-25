@@ -12,7 +12,7 @@ export const ProviderPage = () => {
   return (
     <>
       <View className="top-[140px] w-full h-[100%] items-center">
-        <View className="relative w-[100%] flex-row justify-center h-[140px] bg-[#fff5fa] p-2">
+        <View className="relative w-[100%] flex-row justify-center h-[140px] bg-primary-900 p-2">
           <Image
             className="absolute bottom-14 h-[100px] w-[100px] rounded-full mx-2 my-1 object-cover"
             source={require("../../assets/users/user-2.png")}
@@ -20,7 +20,7 @@ export const ProviderPage = () => {
           <View className="flex-1 mt-4 items-center justify-center max-w-[35%] h-24 text-ellipsis">
             <View className="flex-row-reverse mt-[60px]">
               <RegularText classNames="text-[16px]">رانيا الشريف</RegularText>
-              <BadgeCheckIcon fill="rgb(244 63 94)" className="text-white" />
+              <BadgeCheckIcon fill="#a1a05e" className="text-white" />
             </View>
 
             <View className="flex-row">
@@ -42,7 +42,7 @@ export const ProviderPage = () => {
           </View>
         </View>
         <View className="justify-end items-end w-[85%] my-2 mt-4">
-          <BoldText classNames="text-pink-900/80 text-[14px]">
+          <BoldText classNames="text-text-200/80 text-[14px]">
             الخدمات :
           </BoldText>
         </View>
@@ -78,9 +78,9 @@ export const ProviderPage = () => {
         </ListContainer>
         <Pressable
           onPress={() => setSelected("محادثة")}
-          className="absolute top-[569.5px] border-t-8 border-white items-center justify-center w-full bg-[#FDE2F1] h-[55px] rounded-t-xl"
+          className="absolute top-[569.5px] border-t-8 border-background-950 items-center justify-center w-full bg-primary-800 h-[55px] rounded-t-xl"
         >
-          <BoldText classNames="text-[15px] tracking-widest	text-pink-900">
+          <BoldText classNames="text-[15px] tracking-widest	text-text-200">
             التواصل مع مقدمة الخدمة
           </BoldText>
         </Pressable>

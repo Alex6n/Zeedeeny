@@ -22,7 +22,7 @@ export default function Intro() {
       resizeMode="cover"
     >
       <View style={styles.container}>
-        <BoldText classNames="text-[#a0667092] text-2xl my-10">
+        <BoldText classNames="text-text-300 text-2xl my-10">
           يرجى اختيار موقع الخدمة
         </BoldText>
         <View className="flex-row gap-5">
@@ -38,7 +38,7 @@ export default function Intro() {
               source={require("../../assets/4363444.png")}
             />
 
-            <RegularText classNames="text-[#a0667092] mt-1 text-[18px] ">
+            <RegularText classNames="text-text-200 mt-1 text-[18px] ">
               نجيكِ
             </RegularText>
           </Pressable>
@@ -53,7 +53,7 @@ export default function Intro() {
               className="w-[63px] h-[63px]"
               source={require("../../assets/830469.png")}
             />
-            <RegularText classNames="text-[#a0667092] mt-1 text-[18px]">
+            <RegularText classNames="text-text-200 mt-1 text-[18px]">
               تجينا
             </RegularText>
           </Pressable>

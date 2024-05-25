@@ -27,7 +27,7 @@ export const ItemPage = () => {
       </View>
 
       <View className="absolute top-[220px] w-full h-[100%] items-center">
-        <View className="flex-row w-[90%] h-34 bg-[#fff5fa] rounded-xl border-[3px] border-white p-2">
+        <View className="flex-row w-[90%] h-34 bg-background-950 rounded-xl border border-white p-2">
           <View className="flex-1 mr-2 items-center justify-center max-w-[35%] text-ellipsis">
             <View className="flex-row-reverse justify-evenly h-10 w-full px-2">
               <Pressable
@@ -50,7 +50,7 @@ export const ItemPage = () => {
                 <Share className="text-zinc-400" />
               </Pressable>
             </View>
-            <RegularText classNames="text-[#633e539b] text-[10px] truncate mb-1">
+            <RegularText classNames="text-text-200 text-[10px] truncate mb-1">
               مقدمة الخدمة : {item.provider}
             </RegularText>
 
@@ -76,12 +76,12 @@ export const ItemPage = () => {
               {item.descreption}
             </RegularText>
             <View className="flex-row-reverse items-end h-5">
-              <RegularText classNames="text-sm text-green-600 mt-[2px]">
+              <RegularText classNames="text-sm text-green-700 mt-[2px]">
                 {item.price} RS
               </RegularText>
               {item.offer && (
                 <View className="mr-[5%] mb-[1px] flex items-center justify-center h-[19]">
-                  <RegularText classNames="text-white text-[10px] rounded-md bg-rose-600/90 p-[2px] px-[4px]">
+                  <RegularText classNames="text-white text-[10px] rounded-md bg-accent-600/90 p-[2px] px-[4px]">
                     {item.offer} OFFER
                   </RegularText>
                 </View>
@@ -89,29 +89,29 @@ export const ItemPage = () => {
             </View>
           </View>
         </View>
-        <View className="flex-row-reverse h-10 w-[85%] my-1 justify-between">
+        <View className="flex-row-reverse h-10 w-[85%] my-2 justify-between">
           <Pressable
-            className="items-center justify-center bg-pink-200/60 w-[49.5%] rounded-lg"
+            className="items-center justify-center bg-primary-600/60 w-[49.5%] rounded-lg"
             onPress={() => setSelected("حجز موعد")}
           >
-            <BoldText classNames="text-[15px] text-pink-900">حجز موعد</BoldText>
+            <BoldText classNames="text-[15px] text-text-200">حجز موعد</BoldText>
           </Pressable>
           <Pressable
-            className="items-center justify-center bg-pink-200/40 w-[49.5%] rounded-lg"
+            className="items-center justify-center bg-primary-700/40 w-[49.5%] rounded-lg"
             onPress={() => setSelected("ملف مقدمة الخدمة")}
           >
-            <BoldText classNames="text-[15px] text-pink-900">
+            <BoldText classNames="text-[15px] text-text-200">
               ملف مقدم الخدمة
             </BoldText>
           </Pressable>
         </View>
         <View className="justify-end items-end w-[85%] my-2 mt-4">
-          <BoldText classNames="text-pink-900/80 text-[14px]">
+          <BoldText classNames="text-text-100/80 text-[14px]">
             تعليقات العملاء :
           </BoldText>
         </View>
         <ListContainer classNames="w-[100%] max-h-[270px]">
-          <View className="flex-row-reverse gap-1 mx-20 my-[1px] justify-start items-center w-[85%] h-34 bg-[#fff5fa] rounded-xl border-[3px] border-white py-2 h-20">
+          <View className="flex-row-reverse gap-1 mx-20 my-[1px] justify-start items-center w-[85%] h-34 bg-primary-900 rounded-xl border-[3px] border-background-950 py-2 h-20">
             <Image
               className="aspect-square w-[50px] rounded-full mx-2 mb-1 object-cover"
               source={require("../../assets/users/477ebd019128cab4ca302363a93803ea.jpg")}
@@ -145,7 +145,7 @@ export const ItemPage = () => {
               </View>
             </View>
           </View>
-          <View className="flex-row-reverse gap-1 mx-20 my-[1px] justify-start items-center w-[85%] h-34 bg-[#fff5fa] rounded-xl border-[3px] border-white py-2 h-20">
+          <View className="flex-row-reverse gap-1 mx-20 my-[1px] justify-start items-center w-[85%] h-34 bg-primary-900 rounded-xl border-[3px] border-background-950 py-2 h-20">
             <View className="flex items-center justify-center aspect-square w-[50px] bg-white/80 rounded-full border border-gray-400/10 mx-2 mb-1">
               <User className="text-gray-400" />
             </View>
@@ -178,7 +178,7 @@ export const ItemPage = () => {
               </View>
             </View>
           </View>
-          <View className="flex-row-reverse gap-1 mx-20 my-[1px] justify-start items-center w-[85%] h-34 bg-[#fff5fa] rounded-xl border-[3px] border-white py-2 h-20">
+          <View className="flex-row-reverse gap-1 mx-20 my-[1px] justify-start items-center w-[85%] h-34 bg-primary-900 rounded-xl border-[3px] border-background-950 py-2 h-20">
             <View className="flex items-center justify-center aspect-square w-[50px] bg-white/80 rounded-full border border-gray-400/10 mx-2 mb-1">
               <User className="text-gray-400" />
             </View>
@@ -211,7 +211,7 @@ export const ItemPage = () => {
               </View>
             </View>
           </View>
-          <View className="flex-row-reverse gap-1 mx-20 my-[1px] justify-start items-center w-[85%] h-34 bg-[#fff5fa] rounded-xl border-[3px] border-white py-2 h-20">
+          <View className="flex-row-reverse gap-1 mx-20 my-[1px] justify-start items-center w-[85%] h-34 bg-primary-900 rounded-xl border-[3px] border-background-950 py-2 h-20">
             <View className="flex items-center justify-center aspect-square w-[50px] bg-white/80 rounded-full border border-gray-400/10 mx-2 mb-1">
               <User className="text-gray-400" />
             </View>
@@ -247,9 +247,9 @@ export const ItemPage = () => {
         </ListContainer>
         <Pressable
           onPress={() => setSelected("محادثة")}
-          className="absolute top-[489.5px] border-t-8 border-white items-center justify-center w-full bg-[#FDE2F1] h-[55px] rounded-t-xl"
+          className="absolute top-[489.5px] border-t-8 border-background-950 items-center justify-center w-full bg-primary-800 h-[55px] rounded-t-xl"
         >
-          <BoldText classNames="text-[15px] tracking-widest	text-pink-900">
+          <BoldText classNames="text-[15px] tracking-widest	text-text-200">
             التواصل مع مقدمة الخدمة
           </BoldText>
         </Pressable>

@@ -12,7 +12,7 @@ import { ItemsProvider } from "./lib/ItemsContext";
 
 export default function App() {
   return (
-    <View className="flex-1 justify-center items-center bg-white">
+    <View className="flex-1 justify-center items-center bg-background-950">
       <SelectedProvider>
         <ProviderStateProvider>
           <LocationProvider>

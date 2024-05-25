@@ -30,55 +30,55 @@ export const AccountInfo = () => {
         <View className="flex-row-reverse h-10 w-[85%] my-1 justify-between">
           {manage && !passReset && (
             <Pressable
-              className="items-center justify-center bg-pink-200/60 w-[49.5%] rounded-lg"
+              className="items-center justify-center bg-primary-800/60 w-[49.5%] rounded-lg"
               onPress={() => setPassReset(true)}
             >
-              <BoldText classNames="text-[15px] text-pink-900">
+              <BoldText classNames="text-[15px] text-text-100">
                 تغيير الرقم السري
               </BoldText>
             </Pressable>
           )}
           {!manage && !passReset && (
             <Pressable
-              className={`items-center justify-center bg-pink-200/60 ${
+              className={`items-center justify-center bg-primary-800/60 ${
                 provider ? "w-full" : "w-[49.5%]"
               }  rounded-lg`}
               onPress={() => setManage(true)}
             >
-              <BoldText classNames="text-[15px] text-pink-900">
+              <BoldText classNames="text-[15px] text-text-100">
                 إدارة الحساب
               </BoldText>
             </Pressable>
           )}
           {passReset && (
             <Pressable
-              className="items-center justify-center bg-pink-200/60 w-full rounded-lg"
+              className="items-center justify-center bg-primary-800/60 w-full rounded-lg"
               onPress={() => {
                 setPassReset(false);
                 setManage(false);
               }}
             >
-              <BoldText classNames="text-[15px] text-pink-900">
+              <BoldText classNames="text-[15px] text-text-100">
                 تطبيق التغييرات
               </BoldText>
             </Pressable>
           )}
           {!manage && !passReset && !provider && (
             <Pressable
-              className="items-center justify-center bg-pink-200/60 w-[49.5%] rounded-lg"
+              className="items-center justify-center bg-primary-800/60 w-[49.5%] rounded-lg"
               onPress={() => setProvider(true)}
             >
-              <BoldText classNames="text-[15px] text-pink-900">
+              <BoldText classNames="text-[15px] text-text-100">
                 تقديم خدمات
               </BoldText>
             </Pressable>
           )}
           {manage && !passReset && (
             <Pressable
-              className="items-center justify-center bg-pink-200/60 w-[49.5%] rounded-lg"
+              className="items-center justify-center bg-primary-800/60 w-[49.5%] rounded-lg"
               onPress={() => setManage(false)}
             >
-              <BoldText classNames="text-[15px] text-pink-900">
+              <BoldText classNames="text-[15px] text-text-100">
                 تطبيق التغييرات
               </BoldText>
             </Pressable>

@@ -30,12 +30,12 @@ export const Booking = () => {
   };
   return (
     <View className="w-full h-[81%] mt-[35px] justify-between items-center">
-      <View className="flex-row gap-2 w-full justify-center items-center bg-[#FDE2F1]/50 h-[120px]">
+      <View className="flex-row gap-2 w-full justify-center items-center bg-primary-800/50 h-[120px]">
         <View>
           <RegularText classNames="text-center">وقت الموعد</RegularText>
           <View className="bg-white rounded-lg px-10 py-1 my-1 border border-zinc-400/20">
             <Pressable onPress={changeTimeHndler}>
-              <BoldText classNames="text-center text-pink-900/80">
+              <BoldText classNames="text-center text-text-300/80">
                 {time.toLocaleTimeString()}
               </BoldText>
             </Pressable>
@@ -44,14 +44,14 @@ export const Booking = () => {
         <View>
           <RegularText classNames="text-center">تاريخ الموعد</RegularText>
           <View className="bg-white rounded-lg px-10 py-1 my-1 border border-zinc-400/20">
-            <BoldText classNames="text-center text-pink-900/80">
+            <BoldText classNames="text-center text-text-300/80">
               {date.toISOString().split("T")[0]}
             </BoldText>
           </View>
         </View>
       </View>
-      <Pressable className="border-t-8 border-white items-center justify-center w-full bg-[#FDE2F1] h-[55px] rounded-t-xl">
-        <BoldText classNames="text-[15px] tracking-widest	text-pink-900">
+      <Pressable className="border-t-8 border-background-950 items-center justify-center w-full bg-primary-800 h-[55px] rounded-t-xl">
+        <BoldText classNames="text-[15px] tracking-widest	text-text-200">
           إكمال الحجز
         </BoldText>
       </Pressable>
