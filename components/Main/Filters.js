@@ -21,31 +21,31 @@ export const Filters = ({ modalVisible, setModalVisible }) => {
       }}
     >
       <View className="h-full justify-center items-center bg-zinc-500/50">
-        <View className="bg-[#ece1e5] rounded-xl justify-between w-[65%] h-[230px]">
+        <View className="bg-background-950 rounded-xl justify-between w-[65%] h-[230px]">
           <View className="m-3">
-            <BoldText classNames="text-pink-900 text-[16px]">
+            <BoldText classNames="text-text-200 text-[16px]">
               ترتيب حسب :
             </BoldText>
             <View>
               <RadioButton
-                color="rgb(131 24 67)"
+                color="#a1a05e"
                 value="السعر"
                 status={checked === "السعر" ? "checked" : "unchecked"}
                 onPress={() => setChecked("السعر")}
               />
               <RadioButton
-                color="rgb(131 24 67)"
+                color="#a1a05e"
                 value="التقييم"
                 status={checked === "التقييم" ? "checked" : "unchecked"}
                 onPress={() => setChecked("التقييم")}
               />
             </View>
-            <BoldText classNames="text-pink-900 text-[16px]">
+            <BoldText classNames="text-text-200 text-[16px]">
               تصفية حسب :
             </BoldText>
             <View>
               <Checkbox
-                color="rgb(131 24 67)"
+                color="#a1a05e"
                 status={checked ? "checked" : "unchecked"}
                 onPress={() => {
                   setChecked(!checked);
@@ -55,16 +55,16 @@ export const Filters = ({ modalVisible, setModalVisible }) => {
           </View>
           <View className="flex-row gap-1 w-full p-1 pr-2">
             <Pressable
-              className="items-center justify-center bg-pink-200/60 h-9 w-[49.5%] border border-zinc-100/50 rounded-lg"
+              className="items-center justify-center bg-primary-700/60 h-9 w-[49.5%] border border-zinc-100/50 rounded-lg"
               onPress={() => setModalVisible(false)}
             >
-              <BoldText classNames="text-[15px] text-pink-900">تطبيق</BoldText>
+              <BoldText classNames="text-[15px] text-text-200">تطبيق</BoldText>
             </Pressable>
             <Pressable
-              className="items-center justify-center bg-pink-200/30 h-9 w-[49.5%] border border-zinc-100/50 rounded-lg"
+              className="items-center justify-center bg-primary-700/30 h-9 w-[49.5%] border border-zinc-100/50 rounded-lg"
               onPress={() => setModalVisible(false)}
             >
-              <BoldText classNames="text-[15px] text-pink-900">إلغاء</BoldText>
+              <BoldText classNames="text-[15px] text-text-200">إلغاء</BoldText>
             </Pressable>
           </View>
         </View>

@@ -8,41 +8,52 @@ import {
 } from "react-native";
 import { BoldText } from "../Text/BoldText";
 import { RegularText } from "../Text/RegularText";
+import { useSelected } from "../../lib/selectedContext";
+import { useLocation } from "../../lib/locationContext";
 
 export default function Intro() {
+  const { setSelected } = useSelected();
+  const { setLocation } = useLocation();
+
   return (
     <ImageBackground
-      className="w-full h-full"
+      className="w-full"
       source={require("../../assets/bg.jpg")}
       resizeMode="cover"
     >
       <View style={styles.container}>
-        <BoldText classNames="text-[#a0667092] text-2xl my-10">
+        <BoldText classNames="text-text-300 text-2xl my-10">
           يرجى اختيار موقع الخدمة
         </BoldText>
         <View className="flex-row gap-5">
           <Pressable
             className="flex justify-center items-center rounded-full border-2 border-gray-400/20 w-[135] py-4"
-            onPress={() => {}}
+            onPress={() => {
+              setSelected("الرئيسية");
+              setLocation("نجيكِ");
+            }}
           >
             <Image
               className="w-[63px] h-[63px]"
               source={require("../../assets/4363444.png")}
             />
 
-            <RegularText classNames="text-[#a0667092] mt-1 text-[18px] ">
+            <RegularText classNames="text-text-200 mt-1 text-[18px] ">
               نجيكِ
             </RegularText>
           </Pressable>
           <Pressable
             className="flex justify-center items-center rounded-full border-2 border-gray-400/20 w-[135] py-4"
-            onPress={() => {}}
+            onPress={() => {
+              setSelected("الرئيسية");
+              setLocation("تجينا");
+            }}
           >
             <Image
               className="w-[63px] h-[63px]"
               source={require("../../assets/830469.png")}
             />
-            <RegularText classNames="text-[#a0667092] mt-1 text-[18px]">
+            <RegularText classNames="text-text-200 mt-1 text-[18px]">
               تجينا
             </RegularText>
           </Pressable>

@@ -1,9 +1,12 @@
+import { useSelected } from "../../lib/selectedContext";
 import ListContainer from "../Main/ListContainer";
 import { Option } from "./Option";
 
 export const More = () => {
+  const { setSelected } = useSelected();
+
   return (
-    <ListContainer classNames="mt-[100px]">
+    <ListContainer classNames="mt-[100px] w-full">
       <Option providerOnly title="العملاء الحاليين" />
       <Option providerOnly title="سجل العملاء" />
       <Option providerOnly title="التعليم" />
@@ -12,12 +15,12 @@ export const More = () => {
 
       <Option title="إدارة حجوزاتي" />
       <Option title="طلباتي السابقة" />
-      <Option title="المفضلة" />
+      <Option pressAction={() => setSelected("المفضلة")} title="المفضلة" />
       <Option title="الدفع" />
       <Option title="تقييم التطبيق" />
-      <Option title="بلغ عن مشكلة" />
+      <Option title="بلغي عن مشكلة" />
       <Option title="الدعم الفني" />
-      <Option title="تسجيل الخروج" />
+      <Option pressAction={() => setSelected("intro")} title="تسجيل الخروج" />
     </ListContainer>
   );
 };

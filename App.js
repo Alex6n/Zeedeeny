@@ -3,6 +3,7 @@ import { ProviderStateProvider } from "./lib/providerState";
 import { SelectedProvider } from "./lib/selectedContext";
 import AppView from "./components/Main/AppView";
 import { LocationProvider } from "./lib/locationContext";
+import { ItemsProvider } from "./lib/ItemsContext";
 
 // TODO: Work on Product Page
 // TODO: Work on Service Provider
@@ -11,11 +12,13 @@ import { LocationProvider } from "./lib/locationContext";
 
 export default function App() {
   return (
-    <View className="flex-1 justify-center items-center bg-white">
+    <View className="flex-1 justify-center items-center bg-background-950">
       <SelectedProvider>
         <ProviderStateProvider>
           <LocationProvider>
-            <AppView />
+            <ItemsProvider>
+              <AppView />
+            </ItemsProvider>
           </LocationProvider>
         </ProviderStateProvider>
       </SelectedProvider>

@@ -24,7 +24,7 @@ export default function Header() {
   ];
 
   return (
-    <View className="bg-[#bd85a69b] flex justify-end items-center absolute top-0 w-full h-[87px]">
+    <View className="bg-primary-600 flex justify-end items-center absolute top-0 w-full h-[87px]">
       {Browser.includes(selected) && (
         <Pressable
           className="absolute left-3 top-[55px]"

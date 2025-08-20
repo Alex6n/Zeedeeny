@@ -2,6 +2,7 @@ import { Circle, User } from "lucide-react-native";
 import { Image, Pressable, View } from "react-native";
 import { BoldText } from "../Text/BoldText";
 import { RegularText } from "../Text/RegularText";
+import { useSelected } from "../../lib/selectedContext";
 
 export const ChatItem = ({
   image,
@@ -11,8 +12,13 @@ export const ChatItem = ({
   lastMessageTime,
   read,
 }) => {
+  const { setSelected } = useSelected();
+
   return (
-    <Pressable className="flex-row-reverse gap-1 mx-20 my-1 justify-start items-center border border-gray-400/10 bg-[#e45dd815] w-full h-[84px] py-1 rounded-2xl">
+    <Pressable
+      onPress={() => setSelected("محادثة")}
+      className="flex-row-reverse gap-1 mx-20 my-1 justify-start items-center bg-primary-800/50 w-full h-[84px] py-1 rounded-2xl"
+    >
       {image ? (
         <Image
           className="aspect-square w-[70px] rounded-full mx-2 mb-1 object-cover"
@@ -29,7 +35,7 @@ export const ChatItem = ({
           <BoldText classNames="text-black truncate">{author}</BoldText>
           {provider && (
             <View className="flex items-center justify-center h-[19] mx-[6px] mt-[1px]">
-              <RegularText classNames="text-white text-[10px] rounded-md bg-red-500/90 p-[1px] px-[4px]">
+              <RegularText classNames="text-white text-[10px] rounded-md bg-accent-500/90 p-[1px] px-[4px]">
                 مقدمة خدمات
               </RegularText>
             </View>
@@ -40,12 +46,12 @@ export const ChatItem = ({
           {lastMessage}
         </RegularText>
 
-        <RegularText classNames="text-[#633e539b] text-[10px] truncate h-6">
+        <RegularText classNames="text-text-400 text-[10px] truncate h-6">
           {lastMessageTime}
         </RegularText>
       </View>
 
-      {read || <Circle fill="pink" className="pl-12" />}
+      {read || <Circle fill="#e7ccb1" className="pl-12" />}
     </Pressable>
   );
 };
