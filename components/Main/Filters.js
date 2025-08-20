@@ -3,7 +3,7 @@ import { BoldText } from "../Text/BoldText";
 import { RadioButton, Checkbox } from "react-native-paper";
 import { useState } from "react";
 
-// sort : price, rating
+// sort : price, rating, closest
 // filter : liked, offers
 
 export const Filters = ({ modalVisible, setModalVisible }) => {
